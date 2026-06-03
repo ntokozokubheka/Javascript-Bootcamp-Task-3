@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal System Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <h2>Signup Portal</h2>
+        <form id="regForm" novalidate>
+            <div class="input-block">
+                <label>Username</label>
+                <input type="text" id="usr">
+                <span id="usrErr" class="err-label"></span>
+            </div>
+
+            <div class="input-block">
+                <label>Email</label>
+                <input type="email" id="eml">
+                <span id="emlErr" class="err-label"></span>
+            </div>
+
+            <div class="input-block">
+                <label>Password</label>
+                <input type="password" id="pwd">
+                <span id="pwdErr" class="err-label"></span>
+            </div>
+
+            <div class="input-block">
+                <label>
+                    <input type="checkbox" id="chkTerms"> Accept Terms
+                </label>
+                <span id="chkErr" class="err-label"></span>
+            </div>
+
+            <button type="submit" class="action-btn">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="main-box">
+        <h3>Verification Status</h3>
+        <button id="resendBtn" class="action-btn" disabled>Resend Verification (10s)</button>
+    </div>
+
+    <div class="main-box">
+        <h3>Console Triggers</h3>
+        <button id="syncTrigger" style="margin-bottom: 6px;">Sync Task</button>
+        <button id="asyncTrigger">Async Task</button>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="async.js"></script>
+</body>
+</html>
